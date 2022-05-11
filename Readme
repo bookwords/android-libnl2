@@ -1,0 +1,11 @@
+clone from https://github.com/cm12-amami/android_platform_external_libnl.git
+
+Background:
+Need 'iw' tool in android, so libnl is essential.
+Found libnl.so and libnetlink.so in HTC 11plus and Redmi K30. So have to try libnl-2.0.
+Finally use NDK build the libnl.a but got the below error message. Android prohibits user to use netlink in an unlocked device.
+"Failed to connect to generic netlink."
+
+Notice:
+1. use APP_PLATFORM=android-21
+2. build static library only.
